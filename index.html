@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+  <title>Login</title>
+</head>
+<body>
+
+  <div class="container" id="container">
+    <div class="form-container sign-up">
+      <form>
+        <h1>Create Account</h1>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <span>or use your email for registeration</span>
+        <input type="text" placeholder="Username">
+        <input type="email" placeholder="Gmail">
+        <input type="password" placeholder="Password">
+        <button>Sign Up</button>
+      </form>
+    </div>
+
+    <div class="form-container sign-in">
+      <form>
+        <h1>Sign In</h1>
+        <div class="social-icons">
+          <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <span>or use your email and password</span>
+        <input type="email" placeholder="Gmail">
+        <input type="password" placeholder="Password">
+        <a href="#">Forgot Your Password?</a>
+        <button>Sign In</button>
+      </form>
+    </div>
+
+    <div class="toggle-container">
+      <div class="toggle">
+        <div class="toggle-panel toggle-right">
+          <img src="logo.png" alt="Logo" class="toggle-logo">
+          <h1>Sign Up!</h1>
+          <p>Heyo fellow ABCA student! Please sign up!</p>
+          <button class="hidden" id="register">Sign Up</button>
+        </div>
+        <div class="toggle-panel toggle-left">
+          <img src="logo.png" alt="Logo" class="toggle-logo">
+          <h1>Welcome!</h1>
+          <p>Sign in to continue to this badass site</p>
+          <button class="hidden" id="Login">Sign in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
