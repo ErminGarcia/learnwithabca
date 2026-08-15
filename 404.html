@@ -3,17 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 Page Not Found</title>
+<title>404 - Page Not Found</title>
 <style>
 :root {
 --primary-green: #1B5E20;
 --secondary-green: #2E7D32;
 --primary-yellow: #FBC02D;
---secondary-yellow: #FFF59D;
---text-dark: #222222;
---text-light: #FAFAFA;
 --bg-light: #F4F7F6;
---bg-white: #FFFFFF;
+--text-dark: #222222;
 }
 
 * {
@@ -26,162 +23,89 @@ font-family: 'Inter', system-ui, -apple-system, sans-serif;
 body {
 background-color: var(--bg-light);
 color: var(--text-dark);
-line-height: 1.7;
 display: flex;
 flex-direction: column;
-min-height: 100vh;
-}
-
-header {
-background-color: var(--primary-green);
-padding: 1.2rem 5%;
-display: flex;
-justify-content: space-between;
 align-items: center;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-position: sticky;
-top: 0;
-z-index: 1000;
+justify-content: center;
+min-height: 100vh;
+text-align: center;
+padding: 2rem;
 }
 
-.logo {
-font-size: 1.75rem;
+.error-code {
+font-size: 12rem;
 font-weight: 800;
-color: var(--primary-yellow);
+color: var(--primary-green);
+line-height: 1;
+margin-bottom: 1rem;
+text-shadow: 5px 5px 0px var(--primary-yellow);
+}
+
+.error-title {
+font-size: 2.5rem;
+font-weight: 700;
+margin-bottom: 1.5rem;
+color: var(--text-dark);
 letter-spacing: -0.5px;
 }
 
-nav {
-display: flex;
-gap: 2rem;
-}
-
-nav a {
-text-decoration: none;
-color: var(--text-light);
-font-weight: 500;
-font-size: 1rem;
-transition: color 0.3s ease;
-}
-
-nav a:hover {
-color: var(--primary-yellow);
-}
-
-main {
-flex: 1;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 4rem 5%;
-}
-
-.error-container {
-background-color: var(--bg-white);
-padding: 4rem;
-border-radius: 16px;
-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
-text-align: center;
-max-width: 600px;
-width: 100%;
-border-top: 6px solid var(--primary-yellow);
-}
-
-.error-container h1 {
-font-size: 8rem;
-font-weight: 900;
-color: var(--primary-green);
-line-height: 1;
-margin-bottom: 0.5rem;
-letter-spacing: -3px;
-}
-
-.error-container h2 {
-font-size: 2rem;
-font-weight: 700;
-color: var(--text-dark);
-margin-bottom: 1.5rem;
-}
-
-.error-container p {
-font-size: 1.1rem;
-color: #555;
-margin-bottom: 2.5rem;
+.error-message {
+font-size: 1.2rem;
+color: #555555;
+margin-bottom: 3rem;
+max-width: 500px;
+line-height: 1.6;
 }
 
 .btn {
 display: inline-block;
 padding: 1rem 2.5rem;
 background-color: var(--primary-green);
-color: var(--primary-yellow);
+color: #FFFFFF;
 text-decoration: none;
 font-weight: 700;
 font-size: 1.1rem;
 border-radius: 8px;
-transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+transition: all 0.3s ease;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
 transform: translateY(-3px);
 box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-background-color: var(--secondary-green);
-}
-
-footer {
-background-color: var(--primary-green);
-color: var(--text-light);
-text-align: center;
-padding: 3rem 5%;
-font-size: 0.95rem;
+background-color: var(--primary-yellow);
+color: var(--primary-green);
 }
 
 @media (max-width: 768px) {
-header {
-flex-direction: column;
-gap: 1.5rem;
-padding: 1.5rem 5%;
+.error-code {
+font-size: 8rem;
+text-shadow: 3px 3px 0px var(--primary-yellow);
+}
+.error-title {
+font-size: 2rem;
+}
+.error-message {
+font-size: 1.1rem;
+}
 }
 
-nav {
-flex-wrap: wrap;
-justify-content: center;
-gap: 1.5rem;
-}
-
-.error-container {
-padding: 2.5rem 1.5rem;
-}
-
-.error-container h1 {
+@media (max-width: 480px) {
+.error-code {
 font-size: 6rem;
+}
+.error-title {
+font-size: 1.75rem;
 }
 }
 </style>
 </head>
 <body>
-<header>
-<div class="logo">Almanza Baptist Christian Academy</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="history.html">History</a>
-<a href="staffs.html">Staffs</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
 
-<main>
-<div class="error-container">
-<h1>404</h1>
-<h2>Page Not Found</h2>
-<p>The page you are looking for might have been removed, had its name changed, or is still uh in progress..?</p>
+<h1 class="error-code">404</h1>
+<h2 class="error-title">Page Not Found</h2>
+<p class="error-message">The page you are looking for might have been removed, had its name changed, or still in progress.. :3</p>
 <a href="index.html" class="btn">Return to Homepage</a>
-</div>
-</main>
 
-<footer>
-<p>Almanza Baptist Christian Academy. All rights reserved.</p>
-</footer>
 </body>
 </html>
