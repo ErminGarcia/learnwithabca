@@ -452,7 +452,9 @@ p { margin-bottom: 1rem; }
 
 .hero h1 {
   color: var(--text-light);
-  margin-bottom: 14px;
+  margin-bottom: 15px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  
 }
 
 .hero p {
