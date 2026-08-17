@@ -3,77 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ABCA</title>
+<title>Almanza Baptist Christian Academy | Biblical Christian Education</title>
+<meta name="description" content="ABCA is a Christian, church-based school in Las Piñas City providing Biblical Christian Education through the School of Tomorrow ACE PACE system.">
+<link rel="icon" href="assets/logo.png" type="image/png">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<header>
-<div class="logo">Almanza Baptist Christian Academy</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="history.html">History</a>
-<a href="staffs.html">Staffs</a>
-<a href="contact.html">Contact</a>
-</nav>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="ABCA Home">
+      <img src="assets/logo.png" alt="ABCA logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">Almanza Baptist Christian Academy</span>
+        <span class="brand-sub">Biblical Christian Education</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" aria-label="Open menu" aria-controls="sideNav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
-<main>
+<aside class="side-nav" id="sideNav" aria-label="Mobile navigation">
+  <div class="side-nav-header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="ABCA logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">ABCA</span>
+        <span class="brand-sub">Christian Academy</span>
+      </span>
+    </div>
+    <button class="side-close" aria-label="Close menu">&times;</button>
+  </div>
+  <ul class="side-nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="history.html">History</a></li>
+    <li><a href="admissions.html">Admissions</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</aside>
+<div class="overlay" aria-hidden="true"></div>
+
 <section class="hero">
-<div class="hero-content">
-<h1>Join us!</h1>
-<p>We are the green warriors!</p>
-<a href="idk.html" class="btn">Join Now</a>
-</div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="ABCA logo" class="hero-logo">
+      <h1>Almanza Baptist Christian Academy</h1>
+      <p>A Christian school committed to helping students grow academically, spiritually, and personally through Biblical Christian Education and an individualized learning approach.</p>
+      <div class="btn-row">
+        <a href="admissions.html" class="btn btn-primary">Apply to ABCA</a>
+        <a href="about.html" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Christ-Centered Learning</h3>
+      <p>Individualized, self-paced education built on Biblical foundations.</p>
+      <img src="assets/2.jpg" alt="Abca students"
+    </div>
+  </div>
 </section>
 
-<section id="about" class="about">
-<h2>About ABCA</h2>
-<p>Almanza Baptist Christian Academy is 3-story christian school</p>
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Welcome to ABCA</span>
+      <h2>A Christian School with a Heart for Students</h2>
+      <p>Almanza Baptist Christian Academy is a Christian, church-related school dedicated to Biblical Christian Education and individualized learning.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">&#10047;</div>
+        <h3>Christian Foundation</h3>
+        <p>ABCA is a church-based school where Biblical truth is woven into daily learning, helping students build a lasting relationship with Christ.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#9997;</div>
+        <h3>Individualized Learning</h3>
+        <p>Through the School of Tomorrow ACE PACE system, students work through self-paced materials tailored to their own level and ability.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#9884;</div>
+        <h3>Character &amp; Discipline</h3>
+        <p>Our approach develops responsibility, discipline, and Christian character alongside strong academic skills.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#9734;</div>
+        <h3>Christian Leadership</h3>
+        <p>We nurture students to discover their God-given gifts and grow into mature Christian leaders who influence their world for Christ.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="history" class="history">
-<h2>Our History</h2>
-<div class="history-card">
-<p>Almanza Baptist Christian Academy was founded in November, 1988</p>
-<p>poging mataba</p>
-</div>
+<section class="section section-light">
+  <div class="container">
+    <div class="mission-vision">
+      <div class="mv-card">
+        <span class="label">Our Mission</span>
+        <h3>Bringing Children to Christ</h3>
+        <p>To bring children to Jesus Christ for salvation and nurture them through quality Biblical Christian Education, helping them develop their God-given abilities and become mature Christian leaders who can positively influence the world for Christ through the 5 E's.</p>
+      </div>
+      <div class="mv-card">
+        <span class="label">Our Vision</span>
+        <h3>A Church-Based Ministry</h3>
+        <p>A church-based educational ministry dedicated to leading children to Jesus Christ, strengthening their lives, and preparing them for Christian service.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="explore" class="explore">
-<h2>Explore ABCA</h2>
-<div class="grid">
-<div class="card">
-<h3>Staffs</h3>
-<p>Alamnza Baptist Christian Academy has merciful 67 staffs</p>
-<a href="staffs.html" class="link-btn">Learn More</a>
-</div>
-<div class="card">
-<h3>ABCA's Goal</h3>
-<p>To build God-like personality.</p>
-<a href="campus.html" class="link-btn">Learn More</a>
-</div>
-<div class="card">
-<h3>What are PACEs?</h3>
-<p>Modules? idk</p></p>
-<a href="athletics.html" class="link-btn">Learn More</a>
-</div>
-</div>
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Student Life</span>
+      <h2>National Student Conventions</h2>
+      <p>ABCA has been part of the School of Tomorrow student convention community since 1994, competing in academic, athletic, and skill-based events that build confidence, character, and fellowship.</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-item"><img src="assets/convention1.png" alt="ABCA students at a national student convention"></div>
+      <div class="gallery-item"><img src="assets/convention2.png" alt="ABCA convention participants"></div>
+      <div class="gallery-item"><img src="assets/convention3.png" alt="ABCA students competing at a convention"></div>
+      <div class="gallery-item"><img src="assets/convention4.png" alt="ABCA convention event"></div>
+      <div class="gallery-item"><img src="assets/convention5.png" alt="ABCA students at the School of Tomorrow convention"></div>
+      <div class="gallery-item"><img src="assets/convention6.png" alt="ABCA delegation at a national convention"></div>
+    </div>
+    <div class="btn-row" style="margin-top:32px;">
+      <a href="https://www.sotphilippines.org/" target="_blank" rel="noopener" class="btn btn-outline">Visit School of Tomorrow Philippines</a>
+    </div>
+  </div>
 </section>
-</main>
 
-<footer>
-<p>Almanza Baptist Christian Academy.</p>
-<p>All rights reserved.</p>
-<p>Eg was here :3</p>
-<br>
-<hr>
-<br>
-<p>learnwithabca@gmail.com</p>
-<a class="fblogo" href="https://www.facebook.com/ABCAwarriorsofficial">
-  <i class="fab fa-facebook"></i>
-</a>
+<section class="cta">
+  <div class="container">
+    <h2>Discover the ABCA Difference</h2>
+    <p>Explore what makes our Christ-centered, individualized approach a meaningful choice for your child's education and spiritual growth.</p>
+    <div class="btn-row">
+      <a href="admissions.html" class="btn btn-primary">Explore Admissions</a>
+      <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="ABCA logo">
+          <span class="name">Almanza Baptist Christian Academy</span>
+        </div>
+        <p>A church-based Christian school providing Biblical Christian Education through the School of Tomorrow ACE PACE system, nurturing students to grow academically, spiritually, and in Christian character.
+        </p>
+        <br>
+        <p>
+          mini egg was here
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Get in Touch</h4>
+        <p>Blk 1 Lot 6 &amp; 7 San Francisco Subd. Almanza 1, Las Piñas City, Philippines</p>
+        <p><a href="mailto:almanzabaptistchristianacademy@gmail.com">almanzabaptistchristianacademy@gmail.com</a></p>
+        <p><a href="https://www.sotphilippines.org/" target="_blank" rel="noopener">School of Tomorrow Philippines</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year">2026</span> Almanza Baptist Christian Academy. All rights reserved.
+    </div>
+  </div>
 </footer>
+
+<script src="index.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
