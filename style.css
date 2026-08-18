@@ -777,6 +777,7 @@ p { margin-bottom: 1rem; }
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid #e8eeec;
+  border-radius: 5px;
 }
 
 .program-img-wrap img {
