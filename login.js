@@ -14,7 +14,7 @@
 
   sb.auth.getSession().then(({ data }) => {
     if (data.session) {
-      window.location.href = "admin-dashboard.html";
+      window.location.href = "dashboard.html";
     }
   });
 
@@ -38,6 +38,6 @@
       return;
     }
 
-    window.location.href = "admin-dashboard.html";
+    window.location.href = "dashboard.html";
   });
 })();
