@@ -1052,4 +1052,167 @@ p { margin-bottom: 1rem; }
 }
 
 
-/* for login */
+/* for dashboard */
+
+
+.dashboard-main {
+  padding: 40px 20px 60px;
+  min-height: 60vh;
+}
+
+.logout-btn {
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+
+.logout-btn:hover {
+  opacity: 0.8;
+}
+
+.stats-section {
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  padding: 20px 28px;
+  min-width: 200px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.section-header-row {
+  margin-bottom: 16px;
+}
+
+.applicants-table-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  overflow-x: auto;
+}
+
+.applicants-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.applicants-table th,
+.applicants-table td {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.applicants-table th {
+  font-weight: 700;
+  color: #444;
+  background: #fafafa;
+}
+
+.applicants-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.applicants-table td.empty-row {
+  text-align: center;
+  color: #888;
+  padding: 32px 16px;
+  white-space: normal;
+}
+
+.btn-delete {
+  background: #fdecea;
+  color: #b3261e;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #fbdad7;
+}
+
+.btn-delete:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dashboard-footer {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.skeleton {
+  display: inline-block;
+  background: linear-gradient(90deg, #e2e2e2 25%, #f0f0f0 50%, #e2e2e2 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.3s ease-in-out infinite;
+  border-radius: 6px;
+  color: transparent;
+}
+
+.stat-value.skeleton {
+  width: 60px;
+  height: 30px;
+}
+
+.skeleton-cell {
+  display: block;
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e2e2e2 25%, #f0f0f0 50%, #e2e2e2 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.3s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 640px) {
+  .dashboard-main {
+    padding: 28px 16px 48px;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+
+  .applicants-table {
+    min-width: 640px;
+  }
+}
+
