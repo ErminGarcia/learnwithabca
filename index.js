@@ -1,4 +1,4 @@
-you(function () {
+(function () {
   const hamburger = document.querySelector(".hamburger");
   const sideNav = document.querySelector(".side-nav");
   const overlay = document.querySelector(".overlay");
