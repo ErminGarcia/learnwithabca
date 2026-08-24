@@ -1,4 +1,4 @@
-(function () {
+you(function () {
   const hamburger = document.querySelector(".hamburger");
   const sideNav = document.querySelector(".side-nav");
   const overlay = document.querySelector(".overlay");
@@ -96,7 +96,7 @@
 
   sb.auth.getSession().then(({ data }) => {
     if (data.session) {
-      window.location.href = "admin-dashboard.html";
+      window.location.href = "dashboard.html";
     }
   });
 
@@ -120,6 +120,6 @@
       return;
     }
 
-    window.location.href = "admin-dashboard.html";
+    window.location.href = "dashboard.html";
   });
 })();
