@@ -9,32 +9,173 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="login.css">
 </head>
-<body class="login-page">
+<body>
 
-<main class="login-main">
-  <section class="login-card">
-    <div class="login-brand">
-      <img src="assets/logo.png" alt="ABCA logo">
-      <span class="login-brand-name">Almanza Baptist Christian Academy</span>
-      <span class="login-brand-sub">Administration Portal</span>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand" aria-label="ABCA Home">
+      <img src="assets/logo.png" alt="ABCA logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">Almanza Baptist Christian Academy</span>
+        <span class="brand-sub">Biblical Christian Education</span>
+      </span>
+    </a>
+
+    <a href="index.html" class="btn btn-outline login-header-btn">Back to Website</a>
+
+    <button class="hamburger" aria-label="Open menu" aria-controls="sideNav" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<aside class="side-nav" id="sideNav" aria-label="Mobile navigation">
+  <div class="side-nav-header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="ABCA logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-name">ABCA</span>
+        <span class="brand-sub">Christian Academy</span>
+      </span>
     </div>
 
-    <div class="login-header">
-      <span class="eyebrow">Administrator Access</span>
-      <h1>Welcome Back</h1>
-      <p>Sign in to access the ABCA administration dashboard.</p>
+    <button class="side-close" aria-label="Close menu">&times;</button>
+  </div>
+
+  <ul class="side-nav-links">
+    <li><a href="index.html">Return to Website</a></li>
+  </ul>
+</aside>
+
+<div class="overlay" aria-hidden="true"></div>
+
+<main class="login-section">
+  <div class="container">
+
+    <div class="login-wrapper">
+
+      <div class="login-brand">
+        <img src="assets/logo.png" alt="ABCA logo">
+        <span class="eyebrow">Administration Portal</span>
+      </div>
+
+      <div class="section-header login-header">
+        <h1>Administrator Login</h1>
+        <p>Sign in to access the ABCA administration dashboard.</p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+
+        <div class="login-field">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            autocomplete="username"
+            placeholder="Enter your username"
+            required
+          >
+        </div>
+
+        <div class="login-field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="current-password"
+            placeholder="Enter your password"
+            required
+          >
+        </div>
+
+        <div id="loginMessage" class="login-message" role="alert"></div>
+
+        <button type="submit" class="btn btn-primary login-submit" id="loginButton">
+          Sign In
+        </button>
+
+      </form>
+
+      <a href="index.html" class="login-return">
+        ← Return to ABCA Website
+      </a>
+
     </div>
 
-    <form id="loginForm" class="login-form">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          autocomplete="username"
-          placeholder="Enter your username"
-          required
+  </div>
+</main>
+
+<script src="index.js"></script>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabase = createClient(
+  "https://mgofvanhrfjzxhpwsoys.supabase.co",
+  "sb_publishable_LD94Ab23HZtRGyNbf7sjmg_2N5sJSNi"
+);
+
+const loginForm = document.getElementById("loginForm");
+const loginButton = document.getElementById("loginButton");
+const loginMessage = document.getElementById("loginMessage");
+
+const AUTH_EMAIL = "learnwithabca@gmail.com";
+const ADMIN_USERNAME = "admin";
+
+function showMessage(message) {
+  loginMessage.textContent = message;
+}
+
+async function checkSession() {
+  const {
+    data: { session }
+  } = await supabase.auth.getSession();
+
+  if (session) {
+    window.location.href = "dashboard.html";
+  }
+}
+
+loginForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
+
+  showMessage("");
+
+  if (username !== ADMIN_USERNAME) {
+    showMessage("Invalid username or password.");
+    return;
+  }
+
+  loginButton.disabled = true;
+  loginButton.textContent = "Signing In...";
+
+  const { error } = await supabase.auth.signInWithPassword({
+    email: AUTH_EMAIL,
+    password
+  });
+
+  if (error) {
+    showMessage("Invalid username or password.");
+    loginButton.disabled = false;
+    loginButton.textContent = "Sign In";
+    return;
+  }
+
+  window.location.href = "dashboard.html";
+});
+
+checkSession();
+</script>
+
+</body>
+</html>          required
         >
       </div>
 
