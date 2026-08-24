@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login | Almanza Baptist Christian Academy</title>
+<meta name="description" content="Administrator login for Almanza Baptist Christian Academy.">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="login.css">
+</head>
+<body class="login-page">
+
+<main class="login-main">
+  <section class="login-card">
+    <div class="login-brand">
+      <img src="assets/logo.png" alt="ABCA logo">
+      <span class="login-brand-name">Almanza Baptist Christian Academy</span>
+      <span class="login-brand-sub">Administration Portal</span>
+    </div>
+
+    <div class="login-header">
+      <span class="eyebrow">Administrator Access</span>
+      <h1>Welcome Back</h1>
+      <p>Sign in to access the ABCA administration dashboard.</p>
+    </div>
+
+    <form id="loginForm" class="login-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          autocomplete="username"
+          placeholder="Enter your username"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="current-password"
+          placeholder="Enter your password"
+          required
+        >
+      </div>
+
+      <div id="loginMessage" class="login-message" role="alert"></div>
+
+      <button type="submit" class="btn btn-primary login-button" id="loginButton">
+        Sign In
+      </button>
+    </form>
+
+    <a href="index.html" class="back-link">← Return to ABCA Website</a>
+  </section>
+</main>
+
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const supabaseUrl = "https://mgofvanhrfjzxhpwsoys.supabase.co";
+const supabaseKey = "sb_publishable_LD94Ab23HZtRGyNbf7sjmg_2N5sJSNi";
+
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+const loginForm = document.getElementById("loginForm");
+const loginButton = document.getElementById("loginButton");
+const loginMessage = document.getElementById("loginMessage");
+
+function showMessage(message, type = "error") {
+  loginMessage.textContent = message;
+  loginMessage.className = `login-message ${type}`;
+}
+
+async function checkExistingSession() {
+  const { data: { session } } = await supabase.auth.getSession();
+
+  if (!session) {
+    return;
+  }
+
+  const { data: admin, error } = await supabase
+    .from("admins")
+    .select("id, username")
+    .eq("id", session.user.id)
+    .maybeSingle();
+
+  if (admin && !error) {
+    window.location.href = "dashboard.html";
+    return;
+  }
+
+  await supabase.auth.signOut();
+}
+
+loginForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
+
+  if (!username || !password) {
+    showMessage("Please enter your username and password.");
+    return;
+  }
+
+  loginButton.disabled = true;
+  loginButton.textContent = "Signing In...";
+  showMessage("");
+
+  const authEmail = `${username}@abca.local`;
+
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email: authEmail,
+    password
+  });
+
+  if (error) {
+    loginButton.disabled = false;
+    loginButton.textContent = "Sign In";
+    showMessage("Invalid username or password.");
+    return;
+  }
+
+  const { data: admin, error: adminError } = await supabase
+    .from("admins")
+    .select("id, username")
+    .eq("id", data.user.id)
+    .maybeSingle();
+
+  if (adminError || !admin) {
+    await supabase.auth.signOut();
+
+    loginButton.disabled = false;
+    loginButton.textContent = "Sign In";
+    showMessage("This account does not have administrator access.");
+    return;
+  }
+
+  window.location.href = "dashboard.html";
+});
+
+checkExistingSession();
+</script>
+
+</body>
+</html>
