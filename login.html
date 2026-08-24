@@ -4,10 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Login | Almanza Baptist Christian Academy</title>
-<meta name="description" content="Administrator login for Almanza Baptist Christian Academy.">
+<meta name="description" content="Admin login for ABCA staff to manage admissions applications.">
 <link rel="icon" href="assets/logo.png" type="image/png">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="login.css">
+<style>
+  /* Login-page-only styles. Move these into style.css later if you'd like,
+     or adjust the colors below to match your exact green/yellow palette. */
+  .login-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+  }
+  .login-card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  .login-card img.brand-logo {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 12px;
+  }
+  .login-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
+  .login-card p.subtitle {
+    color: #666;
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+  }
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+  }
+  .login-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .login-form input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  .login-form input:focus {
+    outline: none;
+    border-color: #4a7c3c; /* placeholder green - adjust to match your theme */
+  }
+  .login-error {
+    background: #fdecea;
+    color: #b3261e;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    display: none;
+  }
+  .login-submit {
+    margin-top: 8px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .login-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+</style>
 </head>
 <body>
 
@@ -20,13 +94,17 @@
         <span class="brand-sub">Biblical Christian Education</span>
       </span>
     </a>
-
-    <a href="index.html" class="btn btn-outline login-header-btn">Back to Website</a>
-
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <button class="hamburger" aria-label="Open menu" aria-controls="sideNav" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </div>
 </header>
@@ -40,255 +118,55 @@
         <span class="brand-sub">Christian Academy</span>
       </span>
     </div>
-
     <button class="side-close" aria-label="Close menu">&times;</button>
   </div>
-
   <ul class="side-nav-links">
-    <li><a href="index.html">Return to Website</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="history.html">History</a></li>
+    <li><a href="admissions.html">Admissions</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </aside>
 
 <div class="overlay" aria-hidden="true"></div>
 
-<main class="login-section">
-  <div class="container">
+<section class="login-section">
+  <div class="login-card">
+    <img src="assets/logo.png" alt="ABCA logo" class="brand-logo">
+    <h1>School Login</h1>
+    <p class="subtitle">Hi there!</p>
 
-    <div class="login-wrapper">
+    <div class="login-error" id="loginError"></div>
 
-      <div class="login-brand">
-        <img src="assets/logo.png" alt="ABCA logo">
-        <span class="eyebrow">Administration Portal</span>
+    <form class="login-form" id="loginForm">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="username">
       </div>
-
-      <div class="section-header login-header">
-        <h1>Administrator Login</h1>
-        <p>Sign in to access the ABCA administration dashboard.</p>
-      </div>
-
-      <form id="loginForm" class="login-form">
-
-        <div class="login-field">
-          <label for="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            autocomplete="username"
-            placeholder="Enter your username"
-            required
-          >
-        </div>
-
-        <div class="login-field">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            autocomplete="current-password"
-            placeholder="Enter your password"
-            required
-          >
-        </div>
-
-        <div id="loginMessage" class="login-message" role="alert"></div>
-
-        <button type="submit" class="btn btn-primary login-submit" id="loginButton">
-          Sign In
-        </button>
-
-      </form>
-
-      <a href="index.html" class="login-return">
-        ← Return to ABCA Website
-      </a>
-
-    </div>
-
-  </div>
-</main>
-
-<script src="index.js"></script>
-
-<script type="module">
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
-
-const supabase = createClient(
-  "https://mgofvanhrfjzxhpwsoys.supabase.co",
-  "sb_publishable_LD94Ab23HZtRGyNbf7sjmg_2N5sJSNi"
-);
-
-const loginForm = document.getElementById("loginForm");
-const loginButton = document.getElementById("loginButton");
-const loginMessage = document.getElementById("loginMessage");
-
-const AUTH_EMAIL = "learnwithabca@gmail.com";
-const ADMIN_USERNAME = "admin";
-
-function showMessage(message) {
-  loginMessage.textContent = message;
-}
-
-async function checkSession() {
-  const {
-    data: { session }
-  } = await supabase.auth.getSession();
-
-  if (session) {
-    window.location.href = "dashboard.html";
-  }
-}
-
-loginForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const username = document.getElementById("username").value.trim();
-  const password = document.getElementById("password").value;
-
-  showMessage("");
-
-  if (username !== ADMIN_USERNAME) {
-    showMessage("Invalid username or password.");
-    return;
-  }
-
-  loginButton.disabled = true;
-  loginButton.textContent = "Signing In...";
-
-  const { error } = await supabase.auth.signInWithPassword({
-    email: AUTH_EMAIL,
-    password
-  });
-
-  if (error) {
-    showMessage("Invalid username or password.");
-    loginButton.disabled = false;
-    loginButton.textContent = "Sign In";
-    return;
-  }
-
-  window.location.href = "dashboard.html";
-});
-
-checkSession();
-</script>
-
-</body>
-</html>          required
-        >
-      </div>
-
-      <div class="form-group">
+      <div>
         <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          autocomplete="current-password"
-          placeholder="Enter your password"
-          required
-        >
+        <input type="password" id="password" name="password" required autocomplete="current-password">
       </div>
-
-      <div id="loginMessage" class="login-message" role="alert"></div>
-
-      <button type="submit" class="btn btn-primary login-button" id="loginButton">
-        Sign In
-      </button>
+      <button type="submit" class="btn btn-primary login-submit" id="loginBtn">Sign In</button>
     </form>
+  </div>
+</section>
 
-    <a href="index.html" class="back-link">← Return to ABCA Website</a>
-  </section>
-</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      &copy; <span id="year">2026</span> Almanza Baptist Christian Academy. All rights reserved.
+    </div>
+  </div>
+</footer>
 
-<script type="module">
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
-
-const supabaseUrl = "https://mgofvanhrfjzxhpwsoys.supabase.co";
-const supabaseKey = "sb_publishable_LD94Ab23HZtRGyNbf7sjmg_2N5sJSNi";
-
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-const loginForm = document.getElementById("loginForm");
-const loginButton = document.getElementById("loginButton");
-const loginMessage = document.getElementById("loginMessage");
-
-function showMessage(message, type = "error") {
-  loginMessage.textContent = message;
-  loginMessage.className = `login-message ${type}`;
-}
-
-async function checkExistingSession() {
-  const { data: { session } } = await supabase.auth.getSession();
-
-  if (!session) {
-    return;
-  }
-
-  const { data: admin, error } = await supabase
-    .from("admins")
-    .select("id, username")
-    .eq("id", session.user.id)
-    .maybeSingle();
-
-  if (admin && !error) {
-    window.location.href = "dashboard.html";
-    return;
-  }
-
-  await supabase.auth.signOut();
-}
-
-loginForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const username = document.getElementById("username").value.trim();
-  const password = document.getElementById("password").value;
-
-  if (!username || !password) {
-    showMessage("Please enter your username and password.");
-    return;
-  }
-
-  loginButton.disabled = true;
-  loginButton.textContent = "Signing In...";
-  showMessage("");
-
-  const authEmail = `${username}@abca.local`;
-
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email: authEmail,
-    password
-  });
-
-  if (error) {
-    loginButton.disabled = false;
-    loginButton.textContent = "Sign In";
-    showMessage("Invalid username or password.");
-    return;
-  }
-
-  const { data: admin, error: adminError } = await supabase
-    .from("admins")
-    .select("id, username")
-    .eq("id", data.user.id)
-    .maybeSingle();
-
-  if (adminError || !admin) {
-    await supabase.auth.signOut();
-
-    loginButton.disabled = false;
-    loginButton.textContent = "Sign In";
-    showMessage("This account does not have administrator access.");
-    return;
-  }
-
-  window.location.href = "dashboard.html";
-});
-
-checkExistingSession();
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/supabase-client.js"></script>
+<script src="index.js"></script>
+<script src="login.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
