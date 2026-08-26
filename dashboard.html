@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Staff Dashboard | Almanza Baptist Christian Academy</title>
-<meta name="description" content="Staff dashboard for managing ABCA admissions applications.">
+<meta name="description" content="Staff dashboard for managing ABCA admissions applications and contact messages.">
 <link rel="icon" href="assets/logo.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -54,7 +54,7 @@
 <div style="margin-bottom:40px;">
 <span style="display:inline-block; font-family:var(--font-body); font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--secondary-green); background-color:var(--secondary-yellow); padding:5px 14px; border-radius:999px; margin-bottom:14px;">Staff Only</span>
 <h1 style="font-family:var(--font-head); color:var(--primary-green); margin-bottom:6px;">Admissions Overview</h1>
-<p style="color:#555;">Review and manage submitted applications.</p>
+<p style="color:#555;">Review and manage submitted applications and inquiries.</p>
 </div>
 
 <div style="display:inline-flex; flex-direction:column; gap:6px; background-color:var(--bg-white); border-radius:12px; box-shadow:var(--shadow-md); padding:22px 32px; margin-bottom:36px;">
@@ -185,7 +185,7 @@ mini egg was here
     document.querySelectorAll(".btn-delete-app").forEach(function (btn) {
       btn.addEventListener("click", async function () {
         const id = btn.getAttribute("data-id");
-        const confirmed = confirm("Delete this application?");
+        const confirmed = confirm("Delete this entry?");
         if (!confirmed) return;
 
         btn.disabled = true;
@@ -209,7 +209,7 @@ mini egg was here
 
         const tbody = document.getElementById("applicantsBody");
         if (tbody.children.length === 0) {
-          tbody.innerHTML = '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">No applications yet.</td></tr>';
+          tbody.innerHTML = '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">No entries yet.</td></tr>';
         }
       });
     });
@@ -223,7 +223,7 @@ mini egg was here
     statValue.textContent = data.length;
 
     if (data.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">No applications yet.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">No entries yet.</td></tr>';
       return;
     }
 
@@ -231,12 +231,12 @@ mini egg was here
     data.forEach(function (app) {
       const row = document.createElement("tr");
       row.innerHTML =
-        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.student_name ?? "") + "</td>" +
-        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.student_age ?? "") + "</td>" +
-        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.grade_level ?? "") + "</td>" +
-        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.parent_name ?? "") + "</td>" +
-        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.email ?? "") + "</td>" +
-        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.contact_number ?? "") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.student_name ?? "—") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.student_age ?? "—") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.grade_level ?? "—") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.parent_name ?? "—") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.email ?? "—") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.contact_number ?? "—") + "</td>" +
         '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.additional_info ?? "—") + "</td>" +
         '<td style="padding:16px; border-bottom:1px solid #eee; white-space:nowrap;">' + formatDate(app.created_at) + "</td>" +
         '<td style="padding:16px; border-bottom:1px solid #eee;"><button class="btn-delete-app" data-id="' + app.id + '" style="background-color:#fdecea; color:#b3261e; border:none; border-radius:6px; padding:7px 16px; font-size:0.85rem; font-weight:600; cursor:pointer;">Delete</button></td>';
@@ -258,7 +258,7 @@ mini egg was here
     if (error) {
       stopSkeletonPulse();
       document.getElementById("applicantsBody").innerHTML =
-        '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">Could not load applications.</td></tr>';
+        '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">Could not load entries.</td></tr>';
       document.getElementById("statValue").textContent = "—";
       return;
     }
