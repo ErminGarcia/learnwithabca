@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff Dashboard | Almanza Baptist Christian Academy</title>
+<meta name="description" content="Staff dashboard for managing ABCA admissions applications.">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+<div class="header-inner">
+<a href="dashboard.html" class="brand" aria-label="ABCA Staff Dashboard">
+<img src="assets/logo.png" alt="ABCA logo" class="brand-logo">
+<span class="brand-text">
+<span class="brand-name">Almanza Baptist Christian Academy</span>
+<span class="brand-sub">Staff Dashboard</span>
+</span>
+</a>
+<nav aria-label="Main navigation">
+<ul class="nav-links">
+<li><a href="#" class="btn btn-outline" id="logoutBtnHeader" style="padding:8px 20px;">Log Out</a></li>
+</ul>
+</nav>
+<button class="hamburger" aria-label="Open menu" aria-controls="sideNav" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+
+<aside class="side-nav" id="sideNav" aria-label="Mobile navigation">
+<div class="side-nav-header">
+<div class="brand">
+<img src="assets/logo.png" alt="ABCA logo" class="brand-logo">
+<span class="brand-text">
+<span class="brand-name">ABCA</span>
+<span class="brand-sub">Staff Dashboard</span>
+</span>
+</div>
+<button class="side-close" aria-label="Close menu">&times;</button>
+</div>
+<ul class="side-nav-links">
+<li><a href="#" id="logoutBtnSide">Log Out</a></li>
+</ul>
+</aside>
+
+<div class="overlay" aria-hidden="true"></div>
+
+<section class="section section-light">
+<div class="container">
+
+<div style="margin-bottom:40px;">
+<span style="display:inline-block; font-family:var(--font-body); font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--secondary-green); background-color:var(--secondary-yellow); padding:5px 14px; border-radius:999px; margin-bottom:14px;">Staff Only</span>
+<h1 style="font-family:var(--font-head); color:var(--primary-green); margin-bottom:6px;">Admissions Overview</h1>
+<p style="color:#555;">Review and manage submitted applications.</p>
+</div>
+
+<div style="display:inline-flex; flex-direction:column; gap:6px; background-color:var(--bg-white); border-radius:12px; box-shadow:var(--shadow-md); padding:22px 32px; margin-bottom:36px;">
+<span style="font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#777;">Total Applicants</span>
+<span id="statValue" style="font-family:var(--font-head); font-size:2.4rem; font-weight:700; color:var(--primary-green); min-width:50px; min-height:34px; display:inline-block;">&nbsp;</span>
+</div>
+
+<div style="margin-bottom:16px;">
+<h2 style="font-family:var(--font-head); color:var(--primary-green);">Current Applicants</h2>
+</div>
+
+<div style="background-color:var(--bg-white); border-radius:12px; box-shadow:var(--shadow-md); overflow-x:auto;">
+<table style="width:100%; border-collapse:collapse; min-width:820px;">
+<thead>
+<tr>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;">Student Name</th>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;">Age</th>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;">Grade Level</th>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;">Parent/Guardian</th>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;">Email</th>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;">Contact Number</th>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;">Additional Info</th>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;">Submitted</th>
+<th style="text-align:left; padding:16px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--primary-green); background-color:var(--bg-light); border-bottom:2px solid var(--secondary-yellow); white-space:nowrap;"></th>
+</tr>
+</thead>
+<tbody id="applicantsBody"></tbody>
+</table>
+</div>
+
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-about">
+<div class="footer-brand">
+<img src="assets/logo.png" alt="ABCA logo">
+<span class="name">Almanza Baptist Christian Academy</span>
+</div>
+<p>A church-based Christian school providing Biblical Christian Education through the School of Tomorrow ACE PACE system, nurturing students to grow academically, spiritually, and in Christian character.
+</p>
+<br>
+<p>
+mini egg was here
+</p>
+</div>
+<div class="footer-col">
+<h4>Explore</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="history.html">History</a></li>
+<li><a href="admissions.html">Admissions</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col footer-contact">
+<h4>Get in Touch</h4>
+<p>Blk 1 Lot 6 &amp; 7 San Francisco Subd. Almanza 1, Las Piñas City, Philippines</p>
+<p><a href="mailto:almanzabaptistchristianacademy@gmail.com">almanzabaptistchristianacademy@gmail.com</a></p>
+<p><a href="https://www.schooloftomorrow.ph" target="_blank" rel="noopener">School of Tomorrow Philippines</a></p>
+<p>Landline: (02) 8403 - 2599</p>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; <span id="year">2026</span> Almanza Baptist Christian Academy. All rights reserved.
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/supabase-client.js"></script>
+<script src="index.js"></script>
+<script>
+(function () {
+  const COLUMN_COUNT = 9;
+  let skeletonTimer = null;
+
+  function startSkeletonPulse() {
+    let up = false;
+    skeletonTimer = setInterval(function () {
+      up = !up;
+      document.querySelectorAll("[data-skeleton]").forEach(function (el) {
+        el.style.opacity = up ? "0.4" : "1";
+      });
+    }, 600);
+  }
+
+  function stopSkeletonPulse() {
+    if (skeletonTimer) {
+      clearInterval(skeletonTimer);
+      skeletonTimer = null;
+    }
+    document.querySelectorAll("[data-skeleton]").forEach(function (el) {
+      el.style.opacity = "1";
+    });
+  }
+
+  function skeletonBar(width) {
+    return '<span data-skeleton style="display:inline-block; height:12px; width:' + width + '; border-radius:6px; background-color:#e2e2e2;"></span>';
+  }
+
+  function renderSkeletonRows(count) {
+    const tbody = document.getElementById("applicantsBody");
+    tbody.innerHTML = "";
+    for (let i = 0; i < count; i++) {
+      const row = document.createElement("tr");
+      let cells = "";
+      for (let j = 0; j < COLUMN_COUNT; j++) {
+        cells += '<td style="padding:16px; border-bottom:1px solid #eee;">' + skeletonBar("70%") + "</td>";
+      }
+      row.innerHTML = cells;
+      tbody.appendChild(row);
+    }
+  }
+
+  function formatDate(timestamp) {
+    if (!timestamp) return "—";
+    const date = new Date(timestamp);
+    const datePart = date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+    const timePart = date.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" });
+    return datePart + " " + timePart;
+  }
+
+  function attachDeleteHandlers() {
+    document.querySelectorAll(".btn-delete-app").forEach(function (btn) {
+      btn.addEventListener("click", async function () {
+        const id = btn.getAttribute("data-id");
+        const confirmed = confirm("Delete this application?");
+        if (!confirmed) return;
+
+        btn.disabled = true;
+        btn.style.opacity = "0.5";
+
+        const { error } = await sb.from("applications").delete().eq("id", id);
+
+        if (error) {
+          alert("Failed to delete. Please try again.");
+          btn.disabled = false;
+          btn.style.opacity = "1";
+          return;
+        }
+
+        const row = btn.closest("tr");
+        row.remove();
+
+        const statValue = document.getElementById("statValue");
+        const current = parseInt(statValue.textContent, 10) || 0;
+        statValue.textContent = Math.max(current - 1, 0);
+
+        const tbody = document.getElementById("applicantsBody");
+        if (tbody.children.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">No applications yet.</td></tr>';
+        }
+      });
+    });
+  }
+
+  function renderApplicants(data) {
+    stopSkeletonPulse();
+    const tbody = document.getElementById("applicantsBody");
+    const statValue = document.getElementById("statValue");
+
+    statValue.textContent = data.length;
+
+    if (data.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">No applications yet.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = "";
+    data.forEach(function (app) {
+      const row = document.createElement("tr");
+      row.innerHTML =
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.student_name ?? "") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.student_age ?? "") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.grade_level ?? "") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.parent_name ?? "") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.email ?? "") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.contact_number ?? "") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;">' + (app.additional_info ?? "—") + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee; white-space:nowrap;">' + formatDate(app.created_at) + "</td>" +
+        '<td style="padding:16px; border-bottom:1px solid #eee;"><button class="btn-delete-app" data-id="' + app.id + '" style="background-color:#fdecea; color:#b3261e; border:none; border-radius:6px; padding:7px 16px; font-size:0.85rem; font-weight:600; cursor:pointer;">Delete</button></td>';
+      tbody.appendChild(row);
+    });
+
+    attachDeleteHandlers();
+  }
+
+  async function loadApplicants() {
+    renderSkeletonRows(5);
+    startSkeletonPulse();
+
+    const { data, error } = await sb
+      .from("applications")
+      .select("*")
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      stopSkeletonPulse();
+      document.getElementById("applicantsBody").innerHTML =
+        '<tr><td colspan="' + COLUMN_COUNT + '" style="padding:32px 16px; text-align:center; color:#888;">Could not load applications.</td></tr>';
+      document.getElementById("statValue").textContent = "—";
+      return;
+    }
+
+    renderApplicants(data);
+  }
+
+  async function logout() {
+    await sb.auth.signOut();
+    window.location.href = "login.html";
+  }
+
+  async function init() {
+    const { data } = await sb.auth.getSession();
+    if (!data.session) {
+      window.location.href = "login.html";
+      return;
+    }
+    await loadApplicants();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    init();
+    document.getElementById("logoutBtnHeader").addEventListener("click", function (e) {
+      e.preventDefault();
+      logout();
+    });
+    document.getElementById("logoutBtnSide").addEventListener("click", function (e) {
+      e.preventDefault();
+      logout();
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  });
+})();
+</script>
+</body>
+</html>
