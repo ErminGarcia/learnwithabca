@@ -107,41 +107,51 @@
 
     <div class="contact-form-wrap">
       <div class="section-header">
-        <span class="eyebrow">Send a Message</span>
-        <h2>We'd Love to Hear From You</h2>
-        <p>Fill out the form below and our team will get back to you.</p>
+        <span class="eyebrow">Apply Now</span>
+        <h2>Submit an Application</h2>
+        <p>Fill out the form below and our staff will review your application.</p>
       </div>
       <form class="contact-form" id="contactForm">
         <div class="form-row">
           <div class="form-field">
-            <label for="contactName">Full Name</label>
-            <input type="text" id="contactName" name="fullName" required>
+            <label for="contactParentName">Parent's/Guardian's Name</label>
+            <input type="text" id="contactParentName" name="parentName" required>
           </div>
+          <div class="form-field">
+            <label for="contactStudentName">Student's Full Name</label>
+            <input type="text" id="contactStudentName" name="studentName" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="contactStudentAge">Student's Age</label>
+            <input type="number" id="contactStudentAge" name="studentAge" min="1" required>
+          </div>
+          <div class="form-field">
+            <label for="contactGradeLevel">Student's Grade Level</label>
+            <input type="text" id="contactGradeLevel" name="gradeLevel" required>
+          </div>
+        </div>
+        <div class="form-row">
           <div class="form-field">
             <label for="contactEmail">Email Address</label>
             <input type="email" id="contactEmail" name="email" required>
           </div>
-        </div>
-        <div class="form-row">
           <div class="form-field">
-            <label for="contactPhone">Phone Number</label>
-            <input type="tel" id="contactPhone" name="phone">
-          </div>
-          <div class="form-field">
-            <label for="contactSubject">Subject</label>
-            <input type="text" id="contactSubject" name="subject" required>
+            <label for="contactNumber">Contact Number</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field full-width">
-            <label for="contactMessage">Message</label>
-            <textarea id="contactMessage" name="message" required></textarea>
+            <label for="contactAdditionalInfo">Additional Information (optional)</label>
+            <textarea id="contactAdditionalInfo" name="additionalInfo"></textarea>
           </div>
         </div>
         <div class="form-submit-row">
           <button type="submit" class="form-submit-btn" id="contactSubmitBtn">
             <span class="form-spinner"></span>
-            <span>Send Message</span>
+            <span>Submit Application</span>
           </button>
           <span class="form-status" id="contactStatus"></span>
         </div>
