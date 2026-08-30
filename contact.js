@@ -41,8 +41,10 @@
     submitBtn.classList.remove("is-loading");
 
     if (error) {
-      showStatus("Something went wrong. Please try again.", "error");
-      return;
+  console.error("Supabase error:", error);
+  showStatus(error.message, "error");
+  return;
+    }
     }
 
     showStatus("Application submitted. We'll get back to you soon.", "success");
