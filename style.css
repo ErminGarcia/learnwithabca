@@ -826,8 +826,6 @@ p { margin-bottom: 1rem; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--secondary-yellow);
-  color: var(--primary-green);
   display: flex;
   align-items: center;
   justify-content: center;
