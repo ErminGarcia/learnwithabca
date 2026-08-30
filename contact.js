@@ -41,9 +41,9 @@
     submitBtn.classList.remove("is-loading");
 
     if (error) {
-  console.error("Supabase error:", error);
-  showStatus(error.message, "error");
-  return;
+       console.error("Supabase error:", error);
+       showStatus(error.message, "error");
+       return;
     }
     }
 
