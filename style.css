@@ -887,7 +887,7 @@ p { margin-bottom: 1rem; }
 .breadcrumb a:hover { color: var(--text-light); }
 
 .site-footer {
-  background-color: #143d18;
+  background-color: linear-gradient(to bottom, #1B5E20, black);
   color: rgba(255, 255, 255, 0.85);
   padding: 48px 0 24px;
 }
