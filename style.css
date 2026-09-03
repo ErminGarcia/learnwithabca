@@ -117,7 +117,7 @@ p { margin-bottom: 1rem; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--secondary-green);
-  background-color: var(--secondary-yellow);
+  background-color: transparent;
   padding: 5px 14px;
   border-radius: 2px;
   margin-bottom: 14px;
@@ -125,7 +125,7 @@ p { margin-bottom: 1rem; }
 
 .section-green .section-header .eyebrow {
   color: var(--primary-green);
-  background-color: var(--primary-yellow);
+  background-color: transparent;
 }
 
 .section-header p {
