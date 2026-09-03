@@ -482,6 +482,7 @@ p { margin-bottom: 1rem; }
   object-fit: cover;
   border-radius: var(--radius-md);
   margin: 0 auto 16px;
+  margin-top: 20px
 }
 
 .hero-card h3 {
@@ -600,54 +601,6 @@ p { margin-bottom: 1rem; }
 .slider-track {
   display: flex;
   transition: transform 0.6s ease;
-}
-
-.slide {
-  min-width: 100%;
-  position: relative;
-}
-
-.slide img {
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.85);
-  color: var(--primary-green);
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 1.4rem;
-  font-weight: 700;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color var(--transition), transform var(--transition);
-  z-index: 2;
-}
-
-.slider-btn:hover {
-  background-color: var(--primary-yellow);
-}
-
-.slider-btn.prev { left: 14px; }
-.slider-btn.next { right: 14px; }
-
-.slider-dots {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 2;
 }
 
 .dot {
