@@ -1319,3 +1319,29 @@ p { margin-bottom: 1rem; }
     gap: 16px;
   }
 }
+
+/* bug fixed */
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
