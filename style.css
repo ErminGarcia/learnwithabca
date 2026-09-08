@@ -470,7 +470,7 @@ p { margin-bottom: 1rem; }
 .hero .btn-row { justify-content: flex-start; }
 
 .hero-card {
-  border-radius: 5x;
+  border-radius: 5px;
   padding: 28px;
   text-align: center;
   margin-top: 50px;
