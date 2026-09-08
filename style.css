@@ -471,6 +471,7 @@ p { margin-bottom: 1rem; }
 
 .hero-card {
   border-radius: 5px;
+  border-color: #005800!
   padding: 28px;
   text-align: center;
   margin-top: 50px;
