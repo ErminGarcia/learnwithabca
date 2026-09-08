@@ -471,19 +471,19 @@ p { margin-bottom: 1rem; }
 
 .hero-card {
   border-radius: 10px;
-  padding: 28px;
+  padding: 28px 28px 0;
   text-align: center;
   margin-top: 50px;
   overflow: hidden;
-  padding-bottom: 0;
 }
 
 .hero-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0;
-    border-radius: 0;
+  width: 100%;
+  max-height: none;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 20px auto 0;
 }
 
 .hero-card h3 {
