@@ -470,13 +470,13 @@ p { margin-bottom: 1rem; }
 .hero .btn-row { justify-content: flex-start; }
 
 .hero-card {
-  border-radius: 10px;
+  border-radius: 5x;
   padding: 28px;
   text-align: center;
   margin-top: 50px;
   overflow: hidden;
   padding-bottom: 0;
-  background-color: #3fac3f;
+  background-color: #006900;
 }
 
 .hero-card img {
