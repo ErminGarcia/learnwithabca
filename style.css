@@ -476,6 +476,7 @@ p { margin-bottom: 1rem; }
   margin-top: 50px;
   overflow: hidden;
   padding-bottom: 0;
+  background-color: #3fac3f;
 }
 
 .hero-card img {
