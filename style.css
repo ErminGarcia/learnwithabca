@@ -471,13 +471,14 @@ p { margin-bottom: 1rem; }
 
 .hero-card {
   border-radius: 5px;
-  border-color: #005800!
+  border: 2px solid #005800;
   padding: 28px;
   text-align: center;
   margin-top: 50px;
   overflow: hidden;
   padding-bottom: 0;
   background-color: #006900;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .hero-card img {
