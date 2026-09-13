@@ -1423,107 +1423,74 @@ p { margin-bottom: 1rem; }
 
 /* jhs schedule*/
 
-.schedule-wrap {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-.schedule-day {
-  background-color: var(--bg-white);
-  border: 1px solid #dfe6e3;
-  border-top: 5px solid var(--primary-green);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-}
-
-.schedule-day-header {
-  background-color: var(--primary-green);
-  color: var(--text-light);
-  font-family: var(--font-head);
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 13px 16px;
-  letter-spacing: 0.02em;
-}
-
-.schedule-table {
+.schedule-table-wrap {
   width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #c9d1cd;
+  box-shadow: var(--shadow-sm);
 }
 
-.schedule-row {
-  display: grid;
-  grid-template-columns: 42% 58%;
-  border-bottom: 1px solid #e5e9e7;
-}
-
-.schedule-row:last-child {
-  border-bottom: none;
-}
-
-.schedule-row > div {
-  padding: 11px 14px;
-}
-
-.schedule-row > div:first-child {
-  font-weight: 600;
-  color: #444;
-  border-right: 1px solid #e5e9e7;
-  background-color: #fafbfa;
-}
-
-.schedule-row > div:last-child {
+.school-schedule {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
   color: #333;
 }
 
-.schedule-head {
-  background-color: #f0f3f1;
-  font-size: 0.78rem;
-  font-weight: 700;
+.school-schedule th {
+  background: var(--primary-green);
+  color: #fff;
+  padding: 14px 12px;
+  border: 1px solid #315c4a;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
 }
 
-.schedule-head > div:first-child,
-.schedule-head > div:last-child {
-  color: var(--primary-green);
-  background-color: #f0f3f1;
+.school-schedule th:first-child {
+  width: 170px;
 }
 
-.schedule-break > div {
-  background-color: #fffdf2 !important;
+.school-schedule td {
+  padding: 13px 12px;
+  border: 1px solid #cfd6d2;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.4;
 }
 
-.schedule-break > div:first-child {
-  color: #665800;
+.school-schedule td:first-child {
+  font-weight: 600;
+  background: #f3f5f3;
+  color: #444;
+  white-space: nowrap;
 }
 
-/* Mobile */
-@media (max-width: 760px) {
-  .schedule-wrap {
-    grid-template-columns: 1fr;
-    gap: 22px;
+.school-schedule tbody tr:nth-child(even) td:not(:first-child) {
+  background: #fafbfa;
+}
+
+.school-schedule tbody tr:hover td {
+  background: #f1f5f2;
+}
+
+.school-schedule .schedule-break td {
+  background: #fff8d9 !important;
+  font-weight: 600;
+  color: #655900;
+}
+
+@media (max-width: 700px) {
+  .schedule-table-wrap {
+    margin-left: -10px;
+    margin-right: -10px;
+    width: calc(100% + 20px);
   }
-}
 
-@media (max-width: 480px) {
-  .schedule-row {
-    grid-template-columns: 44% 56%;
-  }
-
-  .schedule-row > div {
-    padding: 10px 10px;
-    font-size: 0.84rem;
-  }
-
-  .schedule-head {
-    font-size: 0.7rem;
-  }
-
-  .schedule-day-header {
-    font-size: 1.1rem;
+  .school-schedule {
+    min-width: 850px;
   }
 }
