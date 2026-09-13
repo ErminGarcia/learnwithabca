@@ -1494,3 +1494,84 @@ p { margin-bottom: 1rem; }
     min-width: 850px;
   }
 }
+
+/* too lazy to change the css properties lol so ima js put it here. FOR THE ABOUTPAGE STAFF THING*/
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.staff-card {
+  overflow: hidden;
+}
+
+.staff-group-photo {
+  max-width: 1100px;
+  margin: 55px auto 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.staff-group-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3049 / 2033;
+  object-fit: cover;
+}
+
+.staff-group-caption {
+  padding: 22px 26px 24px;
+  text-align: center;
+  background: #fff;
+}
+
+.staff-group-caption span {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1d3557;
+  margin-bottom: 5px;
+}
+
+.staff-group-caption p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .staff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .staff-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .staff-group-photo {
+    margin-top: 40px;
+    border-radius: 14px;
+  }
+
+  .staff-group-caption {
+    padding: 18px 20px 20px;
+  }
+
+  .staff-group-caption span {
+    font-size: 1.1rem;
+  }
+
+  .staff-group-caption p {
+    font-size: 0.9rem;
+  }
+}
