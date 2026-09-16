@@ -116,7 +116,7 @@ p { margin-bottom: 1rem; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--secondary-green);
+  color: #ff3301;
   background-color: transparent;
   padding: 5px 14px;
   border-radius: 2px;
