@@ -3,7 +3,7 @@ var eventsData = [
 { title: "National Students Convention", images: ["assets/intro.jpg", "assets/nsc2.jpg", "assets/nsc3.jpg", "assets/nsc4.jpg", "assets/nsc5.jpg"] },
 { title: "Junior Students Convention", images: ["assets/jsc1.JPG", "assets/jsc2.jpg", "assets/jsc3.jpg", "assets/jsc4.jpg", "assets/jsc5.JPG"] },
 { title: "Nutrition Month", images: ["assets/nutrition1.jpg", "assets/nutrition2.jpg", "assets/nutrition3.jpg", "assets/nutrition4.jpg", "assets/nutrition5.jpg", "assets/nutrition6.jpg"] },
-{ title: "Graduation & Recognition", images: ["assets/gr1.jpg", "assets/gr2.jpg", "assets/gr3.jpg", "gr4.jpg", "gr5.jpg", "assets/gr6.jpg", "assets/gr7.jpg", "assets/gr8.jpg"] },
+{ title: "Graduation & Recognition", images: ["assets/gr1.jpg", "assets/gr2.jpg", "assets/gr3.jpg", "assets/gr4.jpg", "assetsgr5.jpg", "assets/gr6.jpg", "assets/gr7.jpg", "assets/gr8.jpg"] },
 { title: "Field Trip", images: ["assets/field1.jpg", "assets/field2.JPG", "field3.JPG", "field4.jpg", "field5.jpg"] },
 { title: "", images: ["assets/event6-1.png", "assets/event6-2.png"] },
 { title: "", images: ["assets/event7-1.png", "assets/event7-2.png"] },
