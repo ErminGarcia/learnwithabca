@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 var eventsData = [
-{ title: "National Students Convention", images: ["assets/nsc1.jpg", "assets/nsc2.jpg", "assets/nsc3.jpg", "assets/nsc4.jpg", "assets/nsc5.png"] },
+{ title: "National Students Convention", images: ["assets/nsc1.jpg", "assets/nsc2.jpg", "assets/nsc3.jpg", "assets/nsc4.jpg", "assets/nsc5.jpg"] },
 { title: "Junior Students Convention", images: ["assets/convention1.png", "assets/jsc2.jpg", "assets/jsc3.jpg", "assets/jsc4.png", "jsc5.png", "jsc6.png"] },
 { title: "Nutrition Month", images: ["assets/nutrition1.png", "assets/nutrition2.png"] },
 { title: "Graduation & Recognition", images: ["assets/gr1.png", "assets/gr2.png"] },
