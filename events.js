@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 var eventsData = [
 { title: "National Students Convention", images: ["assets/nsc1.jpg", "assets/nsc2.jpg", "assets/nsc3.jpg", "assets/nsc4.jpg", "assets/nsc5.jpg"] },
 { title: "Junior Students Convention", images: ["assets/convention1.png", "assets/jsc2.jpg", "assets/jsc3.jpg", "assets/jsc4.jpg"] },
-{ title: "Nutrition Month", images: ["assets/nutrition1.jpg", "assets/nutrition2.jpg"] },
+{ title: "Nutrition Month", images: ["assets/nutrition1.jpg", "assets/nutrition2.jpg", "nutrition3.jpg"] },
 { title: "Graduation & Recognition", images: ["assets/gr1.png", "assets/gr2.png"] },
 { title: "", images: ["assets/event5-1.png", "assets/event5-2.png"] },
 { title: "", images: ["assets/event6-1.png", "assets/event6-2.png"] },
