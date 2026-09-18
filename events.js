@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 var eventsData = [
-{ title: "National Students Convention", images: ["assets/convention1.png", "assets/convention2.png", "assets/convention3.png", "assets/convention4.png", "assets/convention5.png", "assets/convention6.png"] },
-{ title: "Junior Students Convention", images: ["assets/jsc1.png", "assets/jsc2.png"] },
-{ title: "Nutrition Months", images: ["assets/nutrition1.png", "assets/nutrition2.png"] },
-{ title: "", images: ["assets/event4-1.png", "assets/event4-2.png"] },
+{ title: "National Students Convention", images: ["assets/nsc1.png", "assets/nsc2.png", "assets/nsc3.png", "assets/nsc4.png", "assets/nsc5.png", "assets/nsc6.png"] },
+{ title: "Junior Students Convention", images: ["assets/jsc1.png", "assets/jsc2.png", "assets/jsc3.png", "assets/jsc4.png", "jsc5.png", "jsc6.png"] },
+{ title: "Nutrition Month", images: ["assets/nutrition1.png", "assets/nutrition2.png"] },
+{ title: "Graduation & Recognition", images: ["assets/gr1.png", "assets/gr2.png"] },
 { title: "", images: ["assets/event5-1.png", "assets/event5-2.png"] },
 { title: "", images: ["assets/event6-1.png", "assets/event6-2.png"] },
 { title: "", images: ["assets/event7-1.png", "assets/event7-2.png"] },
