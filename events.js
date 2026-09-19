@@ -10,7 +10,7 @@ var eventsData = [
 
 { title: "Field Trip", images: ["assets/field1.jpg", "assets/field2.JPG", "assets/field3.JPG", "assets/field4.jpg", "assets/field5.jpg"] },
 
-{ title: "Buwan ng Wika", images: ["assets/bwk1.png", "assets/bwk2.png", "assets/bwk3.png", "bwk4.png"] },
+{ title: "Buwan ng Wika", images: ["assets/bwk1.png", "assets/bwk2.png", "assets/bwk3.png", "bwk4.png", "bwk5.png", "bwk6.png"] },
 
 { title: "", images: ["assets/event7-1.png", "assets/event7-2.png"] },
 { title: "", images: ["assets/event8-1.png", "assets/event8-2.png"] }
