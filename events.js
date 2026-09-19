@@ -8,7 +8,7 @@ var eventsData = [
 { title: "Nutrition Month", images: ["assets/nutrition1.jpg", "assets/nutrition2.jpg", "assets/nutrition3.jpg", "assets/nutrition4.jpg", "assets/nutrition5.jpg", "assets/nutrition6.jpg"] },
 { title: "Graduation & Recognition", images: ["assets/gr1.jpg", "assets/gr2.jpg", "assets/gr3.jpg", "assets/gr4.jpg", "assets/gr5.jpg", "assets/gr6.jpg", "assets/gr7.jpg", "assets/gr8.jpg"] },
 
-{ title: "Field Trip", images: ["assets/field1.jpg", "assets/field2.JPG", "assets/field3.JPG", "assets/field4.jpg", "assets/field5.jpg"] },
+{ title: "Field Trip", images: ["assets/field1.jpg", "assets/field2.JPG", "assets/field3.JPG", "assets/field4.jpg", "assets/field5.jpg", "assets/goodnight.mov"] },
 
 { title: "", images: ["assets/event6-1.png", "assets/event6-2.png"] },
 
