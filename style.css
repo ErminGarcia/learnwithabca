@@ -1954,3 +1954,58 @@ transition: none;
 .links {
   color: #0000EE;
 }
+
+
+/*test*/
+
+.notice-block {
+  background-color: #ffffff;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  padding: 36px 0;
+}
+
+.notice-block h2 {
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  color: #1B5E20;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1B5E20;
+  max-width: 820px;
+}
+
+.notice-block p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #222222;
+  max-width: 820px;
+  margin-bottom: 12px;
+}
+
+.notice-block p:last-child {
+  margin-bottom: 0;
+}
+
+.notice-block a {
+  color: #1B5E20;
+  text-decoration: underline;
+}
+
+.notice-block a:hover {
+  color: #2E7D32;
+}
+
+@media (max-width: 560px) {
+  .notice-block {
+    padding: 28px 0;
+  }
+
+  .notice-block h2 {
+    font-size: 1.2rem;
+  }
+
+  .notice-block p {
+    font-size: 0.94rem;
+  }
+}
