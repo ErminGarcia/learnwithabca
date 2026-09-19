@@ -12,9 +12,6 @@ var eventsData = [
 
 { title: "Buwan ng Wika", images: ["assets/bwk1.png", "assets/bwk2.png", "assets/bwk3.png", "assets/bwk4.png", "assets/bwk5.png", "assets/bwk6.png"] },
 
-{ title: "", images: ["assets/event7-1.png", "assets/event7-2.png"] },
-{ title: "", images: ["assets/event8-1.png", "assets/event8-2.png"] }
-
 ];
 
 var grid = document.getElementById("eventsGrid");
