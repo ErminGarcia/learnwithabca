@@ -1961,7 +1961,8 @@ transition: none;
 .layout-container {
   width: min(1000px, 100%);
   margin: 0 auto;
-  colums: 3 300px;
+  columns: 3 300px;
+  column-gap: 1 rem
 }
 
 .layout-container img {
