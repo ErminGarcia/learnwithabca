@@ -2065,6 +2065,10 @@ transition: none;
   }
 }
 
+.reverse {
+  animation: reverse-spin 10s infinite linear;
+}
+
 /* OVERRIDES!! */
 
 .events-page {
