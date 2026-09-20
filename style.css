@@ -1974,8 +1974,9 @@ transition: none;
 .carousel {
   margin: 100px auto;
   width: 90%;
-  border: 3px solid black;
+  border: 1px solid black;
   display: flex;
+  overflow-x: auto;
 }
 
 .groupings {
