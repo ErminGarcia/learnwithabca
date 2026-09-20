@@ -1961,5 +1961,9 @@ transition: none;
 .layout-container {
   width: min(1000px, 100%);
   margin: 0 auto;
-  colums: 3 150px;
+  colums: 3 300px;
+}
+
+.layout-container img {
+  width: 300px;
 }
