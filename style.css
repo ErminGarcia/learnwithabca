@@ -2196,5 +2196,38 @@ transition: none;
   }
 }
 
-/* for the time */
+/* for the future events */
 
+.future-list {
+  width: 100%;
+  max-width: 760px;
+  border-collapse: collapse;
+  border-top: 2px solid var(--primary-green);
+  border-bottom: 1px solid #c9d3ce;
+}
+
+.future-list th,
+.future-list td {
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid #dde4e0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.future-list tr:last-child th,
+.future-list tr:last-child td {
+  border-bottom: 0;
+}
+
+.future-list th {
+  width: 180px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .future-list th {
+    width: 120px;
+    white-space: normal;
+  }
+}
