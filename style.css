@@ -2204,7 +2204,7 @@ transition: none;
   border-collapse: collapse;
   border-top: 2px solid var(--primary-green);
   border-bottom: 1px solid #c9d3ce;
-  margin-left: auto;
+  margin-left: 5px;
 }
 
 .future-list th,
@@ -2230,5 +2230,6 @@ transition: none;
   .future-list th {
     width: 120px;
     white-space: normal;
+    margin-left: 5px;
   }
 }
