@@ -2013,7 +2013,7 @@ transition: none;
 .cards {
   flex: 0 0 300px;
   height: 300px;
-  border-radius: 6px;
+  border-radius: 1px;
   overflow: hidden;
 }
 
