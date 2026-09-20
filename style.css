@@ -1990,6 +1990,7 @@ transition: none;
   display: flex;
   align-items: center;
   gap: 1em;
+  animation: spin;
 }
 
 .cards {
@@ -2004,4 +2005,9 @@ transition: none;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+@keyframe spin {
+  from {translate 0;}
+  to {translate -100;}
 }
