@@ -2102,33 +2102,75 @@ transition: none;
 
 /* for second section hehe */
 
-.nsc-events {
-  min-height: 400px;
-  background: #111;
+.gallery-section {
+  width: 100%;
+  padding: 40px 5%;
+  box-sizing: border-box;
 }
 
-.gallery-pics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
+.gallery-event {
+  margin-bottom: 60px;
 }
 
-.gallery-pics img {
+.gallery-event h2,
+.future-events h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.gallery {
+  columns: 3 280px;
+  column-gap: 15px;
+}
+
+.gallery img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 0px;
+  height: auto;
   display: block;
+  margin-bottom: 15px;
+  break-inside: avoid;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-@media (max-width: 600px) {
-  .gallery-pics {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+.gallery img:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.future-events {
+  min-height: 400px;
+  padding: 50px 5%;
+  background: #111;
+  color: white;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .gallery-section {
+    padding: 30px 20px;
   }
 
-  .gallery-pics img {
-    height: 130px;
+  .gallery-event {
+    margin-bottom: 40px;
+  }
+
+  .gallery-event h2,
+  .future-events h2 {
+    font-size: 22px;
+  }
+
+  .gallery {
+    columns: 2 160px;
+    column-gap: 8px;
+  }
+
+  .gallery img {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 450px) {
+  .gallery {
+    columns: 1;
   }
 }
