@@ -2196,5 +2196,44 @@ transition: none;
   }
 }
 
-/* for the calendar*/
+/* for the time */
 
+.sticky-datetime {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid currentColor;
+  font-family: Arial, sans-serif;
+}
+
+.datetime-content {
+  text-align: right;
+}
+
+#currentDate {
+  font-size: 13px;
+}
+
+#currentTime {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.minimize-btn {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sticky-datetime.minimized .datetime-content {
+  display: none;
+}
