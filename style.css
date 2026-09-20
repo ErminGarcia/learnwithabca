@@ -1962,7 +1962,7 @@ transition: none;
   width: min(1000px, 100%);
   margin: 0 auto;
   columns: 3 300px;
-  column-gap: 1 rem
+  column-gap: 1em
 }
 
 .layout-container img {
