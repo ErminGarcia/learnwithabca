@@ -1974,24 +1974,40 @@ transition: none;
 .carousel {
   margin: 100px auto;
   width: 90%;
-  border: 1px solid black;
   display: flex;
-  overflow-x: auto;
+  overflow: hidden;
   border-radius: 8px;
-  padding: 10px;
-  box-sizing: border-box;
+  position: relative;
 }
 
-.carousel::-webkit-scrollbar {
-  display: none;
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
 }
 
 .groupings {
   display: flex;
   align-items: center;
   gap: 1em;
-  animation: spin 10s infinite linear;
   padding-right: 1em;
+  flex-shrink: 0;
+  animation: spin 10s infinite linear;
 }
 
 .cards {
@@ -2009,6 +2025,11 @@ transition: none;
 }
 
 @keyframes spin {
-  from {translate: 0;}
-  to {translate: -100%;}
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - 1em));
+  }
 }
