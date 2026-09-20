@@ -2009,5 +2009,5 @@ transition: none;
 
 @keyframe spin {
   from {translate 0;}
-  to {translate -100;}
+  to {translate -100%;}
 }
