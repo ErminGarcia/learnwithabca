@@ -1986,12 +1986,11 @@ transition: none;
   gap: 1em;
 }
 
-.cards img {
+.cards {
   flex: 0 0 5em;
   height: 5em;
   padding: 1em;
   border-radius: .2em;
   align-content: center;
-  size: 100%!
   
 }
