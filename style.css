@@ -2098,4 +2098,11 @@ transition: none;
   }
 }
 
-/* OVERRIDES ENDDDSSSSS */
+/* OVERRIDES ENDDDSSSSS *
+
+/* for second section hehe */
+
+.events-content {
+  min-height: 400px;
+  background: #111;
+}
