@@ -1979,6 +1979,10 @@ transition: none;
   overflow-x: auto;
 }
 
+.carousel::-webkit-scrollbar{
+  display: none;
+}
+
 .groupings {
   display: flex;
   align-items: center;
