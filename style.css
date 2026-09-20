@@ -2102,8 +2102,33 @@ transition: none;
 
 /* for second section hehe */
 
-.events-content {
+.nsc-events {
   min-height: 400px;
   background: #111;
 }
 
+.gallery-pics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.gallery-pics img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .gallery-pics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .gallery-pics img {
+    height: 130px;
+  }
+}
