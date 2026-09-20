@@ -2114,6 +2114,85 @@ transition: none;
 
 /* OVERRIDES ENDDDSSSSS *
 
-/* for second section hehe */
+/* extra */
+
+.events-title {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 20px 12px;
+  text-align: left;
+}
+
+.event-block {
+  padding: 40px 0 48px;
+  border-bottom: 1px solid #dde4e0;
+}
+
+.event-block:nth-of-type(even) {
+  background-color: var(--bg-white);
+}
+
+.event-head {
+  border-top: 4px solid var(--primary-green);
+  padding-top: 14px;
+  margin-bottom: 24px;
+}
+
+.event-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--secondary-green);
+}
+
+.event-head h3 {
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  text-align: left;
+}
+
+.event-head h3::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: 12px;
+  background-color: var(--primary-yellow);
+}
+
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.event-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+
+@media (max-width: 760px) {
+  .event-block {
+    padding: 32px 0 36px;
+  }
+
+  .event-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .event-gallery {
+    grid-template-columns: 1fr;
+  }
+}
 
 .
