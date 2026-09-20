@@ -2007,7 +2007,7 @@ transition: none;
   display: block;
 }
 
-@keyframe spin {
+@keyframes spin {
   from {translate: 0;}
   to {translate: -100%;}
 }
