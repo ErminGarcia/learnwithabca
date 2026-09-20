@@ -2054,3 +2054,48 @@ transition: none;
     width: 45px;
   }
 }
+
+/* OVERRIDES!! */
+
+.events-page {
+  padding: 20px 0 64px;
+}
+
+.events-page .container {
+  max-width: none;
+  padding: 0;
+}
+
+.events-page .carousel {
+  width: 96%;
+  height: 55vh;
+  margin: 0 auto 12px;
+}
+
+.events-page .cards {
+  flex: 0 0 280px;
+  height: 45vh;
+}
+
+.events-page .section-header {
+  margin: 0 auto 40px;
+}
+
+@media (max-width: 600px) {
+  .events-page {
+    padding: 10px 0 40px;
+  }
+
+  .events-page .carousel {
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 8px;
+  }
+
+  .events-page .cards {
+    flex: 0 0 180px;
+    height: 38vh;
+  }
+}
+
+/* OVERRIDES ENDDDSSSSS */
