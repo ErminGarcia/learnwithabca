@@ -1990,7 +1990,7 @@ transition: none;
   display: flex;
   align-items: center;
   gap: 1em;
-  animation: spin 5s infinite linear;
+  animation: spin 10s infinite linear;
   padding-right: 1em;
 }
 
