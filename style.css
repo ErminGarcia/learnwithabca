@@ -1970,3 +1970,18 @@ transition: none;
   display: block;
   margin-bottom: 1em;
 }
+
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  border: 3px solid black;
+  display: flex;
+}
+
+.cards {
+  height: 5em;
+  padding: 1em;
+  border-radius: .2em;
+  align-content: center;
+  
+}
