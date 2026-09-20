@@ -2012,7 +2012,7 @@ transition: none;
 
 .cards {
   flex: 0 0 180px;
-  height: 120px;
+  height: 300px;
   border-radius: 6px;
   overflow: hidden;
 }
@@ -2056,7 +2056,7 @@ transition: none;
 
   .cards {
     flex: 0 0 120px;
-    height: 80px;
+    height: 150px;
   }
 
   .carousel::before,
