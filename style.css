@@ -1956,4 +1956,10 @@ transition: none;
 }
 
 
-/*test*/
+/* events */
+
+.layout-container {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+  colums: 3 150px;
+}
