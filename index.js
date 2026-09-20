@@ -77,3 +77,32 @@
     goTo(0);
   }
 })();
+
+const stickyDateTime = document.getElementById("stickyDateTime");
+const minimizeBtn = document.getElementById("minimizeBtn");
+const currentDate = document.getElementById("currentDate");
+const currentTime = document.getElementById("currentTime");
+
+function updateDateTime() {
+  const now = new Date();
+
+  currentDate.textContent = now.toLocaleDateString("en-PH", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+  currentTime.textContent = now.toLocaleTimeString("en-PH", {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit"
+  });
+}
+
+minimizeBtn.addEventListener("click", () => {
+  stickyDateTime.classList.toggle("minimized");
+  minimizeBtn.textContent = stickyDateTime.classList.contains("minimized") ? ">" : "<";
+});
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
